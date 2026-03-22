@@ -12,9 +12,9 @@ body {
 }
 
 .container {
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: 250px 1fr;
 }
 
 .flex-column {
@@ -27,6 +27,10 @@ body {
   background-color: #343a40;
   color: #fff;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.26);
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  align-self: start;
 }
 
 header {
@@ -40,12 +44,13 @@ header {
   display: flex;
   align-items: center;
   gap: 18px;
-  width: 100%;
   height: 75px;
-  /* margin: 5px 0 0 32px; */
   padding: 12px 32px;
-  border-bottom: 1px solid #495057;
   transition: 0.2s ease;
+}
+
+.sidebar-elements:last-child {
+  border-bottom: 1px solid #495057;
 }
 
 .dashboard {
@@ -56,21 +61,38 @@ header {
 .sidebar-elements:hover {
   background-color: #495057;
   cursor: pointer;
+  transform: translateX(0.5px);
+  
 }
 
 .nav-text {
-  font-size: 24px;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
 }
 
 .icon {
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   stroke: #fff;
 }
 
-main {
+.login {
   display: flex;
-  justify-content: center;
   align-items: center;
-  font-size: 50px;
+  gap: 18px;
+  margin-top: auto;
+  height: 75px;
+  padding: 12px 32px;
+}
+
+.login:hover,
+.login:active {
+  background-color: #495057;
+  cursor: pointer;
+}
+
+main {
+  font-size: 25px;
+  padding-left: 12px;
 }
