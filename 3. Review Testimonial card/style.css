@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Inter", sans-serif;
+  background-color: #66d9e8;
+}
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 300px;
+  padding: 10px;
+}
+
+.review{
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.review--style{
+  background-color: #fff;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.25);
+}
+
+.review-heading{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 8px;
+}
+
+.customer-img{
+  height: 18%;
+  width: 18%;
+  border: 1px solid #878282;
+  border-radius: 50%;
+}
+
+.customer-info{
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.customer-name{
+  font-size: 20px;
+  color: #111;
+}
+
+.customer-profession{
+  font-size: 12px;
+  color: #888;
+}
+
+.review-body{
+  color: #333;
+  line-height: 1.6;
+}
+
+.review-footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.review-stars{
+  width: 30%;
+}
+
+.review-date{
+  color: #888;
+  font-size: 12px;
+}
+
+@media (max-width: 1100px){
+
+  .container{
+    padding: 10px;
+  }
+
+  .review{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .review-stars{
+  width: 20%;
+}
+}
+
+@media (max-width: 700px){
+  .container{
+    max-width: 600px;
+    margin-top: 100px;
+    padding: 7px;
+  }
+  .review{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.customer-img{
+  height: 12%;
+  width: 12%;
+  border: 1px solid #878282;
+  border-radius: 50%;
+}
+
+.customer-name{
+  font-size: 18px;
+}
+
+.customer-profession{
+  font-size: 10px;
+  color: #888;
+}
+
+.review-body{
+  color: #333;
+  line-height: 1.5;
+  font-size: 15px;
+}
+}
